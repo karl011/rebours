@@ -26,18 +26,18 @@
 <body>
   <h1>Compte à rebours</h1>
 
-  <h2>Stage</h2>
-  <div class="countdown" id="countdown-stage"></div>
+  <!-- <h2>La fin du stage</h2>
+  <div class="countdown" id="countdown-stage"></div> -->
 
-  <h2>Rapport</h2>
+  <h2>La rédaction du mémoire</h2>
   <div class="countdown" id="countdown-rapport"></div>
 
-  <h2>Soutenance</h2>
+  <h2>La soutenance</h2>
   <div class="countdown" id="countdown-soutenance"></div>
 
   <script>
     // Date de fin du stage
-    const stageEndDate = new Date("2024-08-05");
+    //const stageEndDate = new Date("2024-08-05");
 
     // Date de fin de rédaction du rapport
     const rapportEndDate = new Date("2024-08-22");
@@ -63,7 +63,7 @@
     }
 
     setInterval(function() {
-      updateCountdown(stageEndDate, "countdown-stage");
+      //updateCountdown(stageEndDate, "countdown-stage");
       updateCountdown(rapportEndDate, "countdown-rapport");
       updateCountdown(soutenanceDate, "countdown-soutenance");
     }, 1000);
