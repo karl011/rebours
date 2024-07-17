@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compte à rebours</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f0f0f0;
+      padding: 50px 0;
+    }
+
+    .countdown {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Compte à rebours</h1>
+
+  <h2>Stage</h2>
+  <div class="countdown" id="countdown-stage"></div>
+
+  <h2>Rapport</h2>
+  <div class="countdown" id="countdown-rapport"></div>
+
+  <h2>Soutenance</h2>
+  <div class="countdown" id="countdown-soutenance"></div>
+
+  <script>
+    // Date de fin du stage
+    const stageEndDate = new Date("2024-08-05");
+
+    // Date de fin de rédaction du rapport
+    const rapportEndDate = new Date("2024-08-22");
+
+    // Date de la soutenance
+    const soutenanceDate = new Date("2024-09-14");
+
+    function updateCountdown(endDate, countdownId) {
+      const now = new Date().getTime();
+      const distance = endDate - now;
+
+      if (distance < 0) {
+        document.getElementById(countdownId).textContent = "Terminé";
+      } else {
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById(countdownId).textContent = days + "j " + hours + "h "
+          + minutes + "m " + seconds + "s ";
+      }
+    }
+
+    setInterval(function() {
+      updateCountdown(stageEndDate, "countdown-stage");
+      updateCountdown(rapportEndDate, "countdown-rapport");
+      updateCountdown(soutenanceDate, "countdown-soutenance");
+    }, 1000);
+  </script>
+</body>
+</html>
