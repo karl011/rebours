@@ -1,72 +1,237 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Compte à rebours</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background-color: #f0f0f0;
-      padding: 50px 0;
-    }
-
-    .countdown {
-      font-size: 36px;
-      font-weight: bold;
-      margin-bottom: 30px;
-    }
-
-    h2 {
-      margin-top: 50px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Personnelle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            position: relative;
+            z-index: 1;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            position: sticky;
+            top: 0;
+            z-index: 2;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            padding: 20px;
+        }
+        .section-title {
+            margin-top: 40px;
+            text-align: center;
+        }
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .card img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .blog-post {
+            margin: 20px 0;
+        }
+        .blog-post h3 {
+            margin: 0 0 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-  <h1>Compte à rebours</h1>
+    <header id="header">
+        <h1>Bienvenue sur Ma Page Personnelle</h1>
+    </header>
+    <nav>
+        <a href="#about">À Propos</a>
+        <a href="#cv">CV</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#blog">Blog</a>
+        <a href="rebours.html" target="_blank">Compte à rebours</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="container">
+        <section id="about">
+            <h2 class="section-title">À Propos de Moi</h2>
+            <div class="card">
+                <p>Passionné par le sport et la technologie, je suis toujours à la recherche de nouveaux défis et opportunités pour innover et exceller dans ces domaines. Mon parcours académique et professionnel reflète mon engagement à l'intersection de ces deux passions.</p>
+            </div>
+        </section>
+        <section id="cv">
+            <h2 class="section-title">Mon CV</h2>
+            <div class="card">
+                <h3>Formation Académique</h3>
+                <ul>
+                    <li>
+                        <strong>Master 2 en Miage Orienté Big Data</strong> - Université Côte d'Ivoire
+                        <p>2022 - Présent</p>
+                        <p>Spécialisé en Big Data et intégration des systèmes, acquisition de compétences avancées en analyse de données, gestion de bases de données et outils de reporting.</p>
+                    </li>
+                    <li>
+                        <strong>Licence en Systèmes Informatiques et Génie Logiciel</strong> - Université Côte d'Ivoire
+                        <p>2019 - 2022</p>
+                        <p>Obtention du diplôme avec mention après un stage de 5 mois. Compétences en développement de logiciels, gestion de projets informatiques et bases de données.</p>
+                    </li>
+                </ul>
 
-  <!-- <h2>La fin du stage</h2>
-  <div class="countdown" id="countdown-stage"></div> -->
+                <h3>Expérience Professionnelle</h3>
+                <ul>
+                    <li>
+                        <strong>Stagiaire en Big Data</strong> - ARTCI, Direction de la Régulation des Télécommunications
+                        <p>Février 2024 - Présent</p>
+                        <p>Application des compétences en Big Data pour analyser et valider les offres de services télécoms. Conception et développement d'outils pour faciliter les tâches des régulateurs.</p>
+                    </li>
+                    <li>
+                        <strong>Stage en Développement de Logiciels</strong> - Société Informatique
+                        <p>Juin 2022 - Novembre 2022</p>
+                        <p>Participation au développement de solutions logicielles pour la gestion des données et des processus d'entreprise. Collaboration avec des équipes multidisciplinaires pour assurer la qualité des livrables.</p>
+                    </li>
+                </ul>
 
-  <h2>PFE Deadline (22 août 2024)</h2>
-  <div class="countdown" id="countdown-rapport"></div>
+                <h3>Compétences</h3>
+                <ul>
+                    <li>Langages de Programmation : JavaScript, Python, Java</li>
+                    <li>Technologies Web : HTML, CSS, Node.js, Next.js</li>
+                    <li>Big Data : Hadoop, Spark, Tableau</li>
+                    <li>Base de Données : MySQL, PostgreSQL, MongoDB</li>
+                    <li>Outils de Reporting : Power BI, Tableau</li>
+                </ul>
 
-  <h2>Soutenance IT8(14 septembre 2024)</h2>
-  <div class="countdown" id="countdown-soutenance"></div>
+                <h3>Projets</h3>
+                <ul>
+                    <li>
+                        <strong>Application de Validation d'Offres Télécom</strong>
+                        <p>Développement d'une application web pour la validation et la gestion des offres de services télécoms. Utilisation de Node.js pour le backend et de Next.js pour le frontend.</p>
+                    </li>
+                    <li>
+                        <strong>Analyse de Données Sportives</strong>
+                        <p>Projet d'analyse de performances sportives en utilisant des techniques de Big Data. Création de rapports et de visualisations pour aider les entraîneurs à prendre des décisions basées sur les données.</p>
+                    </li>
+                </ul>
 
-  <script>
-    // Date de fin du stage
-    //const stageEndDate = new Date("2024-08-05");
+                <h3>Langues</h3>
+                <ul>
+                    <li>Français : Langue maternelle</li>
+                    <li>Anglais : Courant</li>
+                </ul>
 
-    // Date de fin de rédaction du rapport
-    const rapportEndDate = new Date("2024-08-22");
+                <h3>Centres d'Intérêt</h3>
+                <ul>
+                    <li>Sport : Passionné de football et de basket-ball</li>
+                    <li>Technologie : Toujours à la recherche des dernières innovations technologiques</li>
+                </ul>
 
-    // Date de la soutenance
-    const soutenanceDate = new Date("2024-09-14");
-
-    function updateCountdown(endDate, countdownId) {
-      const now = new Date().getTime();
-      const distance = endDate - now;
-
-      if (distance < 0) {
-        document.getElementById(countdownId).textContent = "Terminé";
-      } else {
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        document.getElementById(countdownId).textContent = days + "j " + hours + "h "
-          + minutes + "m " + seconds + "s ";
-      }
-    }
-
-    setInterval(function() {
-      //updateCountdown(stageEndDate, "countdown-stage");
-      updateCountdown(rapportEndDate, "countdown-rapport");
-      updateCountdown(soutenanceDate, "countdown-soutenance");
-    }, 1000);
-  </script>
+                <h3>Contact</h3>
+                <ul>
+                    <li>Email: [ton email]</li>
+                    <li>LinkedIn: [ton profil LinkedIn]</li>
+                    <li>GitHub: [ton profil GitHub]</li>
+                </ul>
+            </div>
+        </section>
+        <section id="portfolio">
+            <h2 class="section-title">Mon Portfolio</h2>
+            <div class="card">
+                <div class="project">
+                    <h3>Application de Validation d'Offres Télécom</h3>
+                    <img src="chemin/vers/image1.jpg" alt="Capture d'écran de l'application de validation d'offres télécom">
+                    <p>Développement d'une application web pour la validation et la gestion des offres de services télécoms. Utilisation de Node.js pour le backend et de Next.js pour le frontend. Le projet inclut des fonctionnalités de chargement de fichiers, de validation des données, et de génération de rapports.</p>
+                    <a href="https://github.com/tonprofil/app-validation-telecom" target="_blank">Voir le projet</a>
+                </div>
+                <div class="project">
+                    <h3>Analyse de Données Sportives</h3>
+                    <img src="chemin/vers/image2.jpg" alt="Capture d'écran de l'analyse de données sportives">
+                    <p>Projet d'analyse de performances sportives en utilisant des techniques de Big Data. Création de rapports et de visualisations pour aider les entraîneurs à prendre des décisions basées sur les données. Utilisation de Python et de Tableau pour l'analyse et la visualisation.</p>
+                    <a href="https://github.com/tonprofil/analyse-donnees-sportives" target="_blank">Voir le projet</a>
+                </div>
+                <div class="project">
+                    <h3>Système de Gestion de Bibliothèque</h3>
+                    <img src="chemin/vers/image3.jpg" alt="Capture d'écran du système de gestion de bibliothèque">
+                    <p>Développement d'un système de gestion de bibliothèque pour automatiser les processus de prêt et de retour de livres. Utilisation de Java pour le développement backend et de MySQL pour la gestion de la base de données.</p>
+                    <a href="https://github.com/tonprofil/gestion-bibliotheque" target="_blank">Voir le projet</a>
+                </div>
+                <div class="project">
+                    <h3>Site Web Personnel</h3>
+                    <img src="chemin/vers/image4.jpg" alt="Capture d'écran du site web personnel">
+                    <p>Création de mon site web personnel pour présenter mon CV, mon portfolio et mon blog. Utilisation de HTML, CSS, et JavaScript pour le développement frontend. Ce site est un exemple de mes compétences en développement web et en design.</p>
+                    <a href="https://github.com/tonprofil/site-web-personnel" target="_blank">Voir le projet</a>
+                </div>
+            </div>
+        </section>
+        <section id="blog">
+            <h2 class="section-title">Blog</h2>
+            <div class="card">
+                <div class="blog-post">
+                    <h3>Les Dernières Tendances en Intelligence Artificielle</h3>
+                    <p>Date de publication : 30 juillet 2024</p>
+                    <p>L'intelligence artificielle (IA) continue de transformer le paysage technologique. Dans cet article, je discute des dernières tendances en IA, telles que l'apprentissage profond, les réseaux de neurones convolutifs, et les applications pratiques de l'IA dans divers secteurs comme la santé, le commerce de détail, et l'industrie automobile. Je partage également mes réflexions sur les implications éthiques et les défis à venir.</p>
+                </div>
+                <div class="blog-post">
+                    <h3>Comment l'Analyse de Données Révolutionne le Sport</h3>
+                    <p>Date de publication : 25 juillet 2024</p>
+                    <p>Avec l'avènement des technologies de l'information, l'analyse de données a trouvé une place prépondérante dans le sport. Dans cet article, j'explore comment les équipes sportives utilisent les données pour optimiser les performances des athlètes, améliorer les stratégies de jeu, et prévenir les blessures. Je présente également quelques outils et logiciels populaires utilisés dans l'analyse de données sportives.</p>
+                </div>
+                <div class="blog-post">
+                    <h3>Mon Parcours en Big Data et Sport</h3>
+                    <p>Date de publication : 20 juillet 2024</p>
+                    <p>Depuis toujours passionné par le sport et la technologie, j'ai décidé de combiner ces deux domaines en me spécialisant en Big Data. Dans cet article, je partage mon parcours académique et professionnel, mes expériences marquantes, et comment j'utilise le Big Data pour apporter des innovations dans le monde du sport. Je donne également des conseils pour ceux qui souhaitent suivre un chemin similaire.</p>
+                </div>
+                <div class="blog-post">
+                    <h3>Analyse de la Coupe du Monde 2024 : Les Équipes à Suivre</h3>
+                    <p>Date de publication : 15 juillet 2024</p>
+                    <p>La Coupe du Monde 2024 approche à grands pas, et les fans de football du monde entier attendent avec impatience cet événement. Dans cet article, je fais une analyse des équipes favorites, des joueurs clés, et des stratégies qui pourraient faire la différence. En utilisant des données historiques et des statistiques récentes, je tente de prédire les résultats et les surprises potentielles de ce tournoi.</p>
+                </div>
+                <div class="blog-post">
+                    <h3>Développement d'une Application de Suivi de Performance Sportive</h3>
+                    <p>Date de publication : 10 juillet 2024</p>
+                    <p>Récemment, j'ai travaillé sur le développement d'une application mobile qui aide les athlètes à suivre et analyser leurs performances sportives. Dans cet article, je décris le processus de développement, les technologies utilisées, les défis rencontrés, et les fonctionnalités clés de l'application. Je partage également quelques captures d'écran et les retours des premiers utilisateurs.</p>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <h2 class="section-title">Contact</h2>
+            <div class="card">
+                <p>Tu peux me contacter via les réseaux sociaux suivants :</p>
+                <p>Email: [ton email]</p>
+                <p>LinkedIn: [ton profil LinkedIn]</p>
+                <p>GitHub: [ton profil GitHub]</p>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Dotémin Konaté. Tous droits réservés.</p>
+    </footer>
 </body>
 </html>
